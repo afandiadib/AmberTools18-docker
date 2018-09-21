@@ -1,2 +1,11 @@
-# AmberTools18-docker
-Dockerized AmberTools 18
+# AmberTools 18 Container
+
+To run it:
+
+    docker run -it --rm \
+               --workdir=`pwd` \
+               --volume=`pwd`:`pwd` \
+               afandiadib/ambertools bash
+
+## Compilation tests result:
+
