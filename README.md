@@ -3,7 +3,7 @@
 To run it:
 ```
 docker run -it --rm \
-	         --user=$(id -u) \
+	   --user=$(id -u) \
            --workdir=`pwd` \
            --volume=`pwd`:`pwd` \
            afandiadib/ambertools bash
