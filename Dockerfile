@@ -13,7 +13,7 @@ RUN apt-get update && \
     apt-get -y install curl unzip wget && \
     apt-get -y install csh flex patch gfortran g++ make xorg-dev libbz2-dev zlib1g-dev \
                     libboost-dev libboost-thread-dev libboost-system-dev libboost-all-dev \
-                    mpich libmpich-dev && \
+                    mpich libmpich-dev ssh && \
     wget http://cucis.ece.northwestern.edu/projects/PnetCDF/Release/parallel-netcdf-1.10.0.tar.gz && \
     tar -xzvf parallel-netcdf-1.10.0.tar.gz && cd parallel-netcdf-1.10.0 && \
     ./configure --prefix=/opt/PnetCDF && make && make install && \
