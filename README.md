@@ -7,7 +7,8 @@ docker run -it --rm \
 	   --volume=/etc/passwd:/etc/passwd:ro \
            --workdir=`pwd` \
            --volume=/home/$USER:/home/$USER \
-           --volume=/media:/media --volume=/mnt:/mnt \
+           --volume=/media:/media \
+	   --volume=/mnt:/mnt \
            afandiadib/ambertools bash
 ```
 ## Compilation tests result:
