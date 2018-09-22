@@ -26,7 +26,7 @@ RUN apt-get update && \
     curl -s -b ./cookie.txt -L -o ${filename} "https://drive.google.com${query}" && \
 
     tar -xf AmberTools18.tar.bz2 -C /opt/ && \
-    cd opt/amber18 && echo -e 'y\ny' | ./configure gnu && make install && \
+    cd /opt/amber18 && echo -e 'y\ny' | ./configure gnu && make install && \
     ./configure -mpi --with-pnetcdf /opt/PnetCDF gnu && make install && \
 
     chmod -R 777 /opt && \
