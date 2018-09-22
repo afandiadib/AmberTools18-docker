@@ -11,8 +11,8 @@ RUN apt-get update && \
 # AmberTools 18
     apt-get -y install curl unzip wget && \
     apt-get -y install csh flex patch gfortran g++ make xorg-dev libbz2-dev zlib1g-dev \
-                    libboost-dev libboost-thread-dev libboost-system-dev openmpi-bin \
-                    libopenmpi-dev ssh && \
+                    libboost-dev libboost-thread-dev libboost-system-dev \
+                    mpich libmpich-dev && \
 
     wget https://github.com/ericchiang/pup/releases/download/v0.4.0/pup_v0.4.0_linux_amd64.zip && \
     unzip pup_v0.4.0_linux_amd64.zip && chmod +x pup && \
