@@ -23,7 +23,7 @@ RUN apt-get update && \
     filename=AmberTools18.tar.bz2 && \
     fileid=1HBURnAo7G6_LqnY_OQba597xSBjt9OHe && \
     query=`curl -c ./cookie.txt -s -L "https://drive.google.com/uc?export=download&id=${fileid}" | ./pup 'a#uc-download-link attr{href}' | sed -e 's/amp;//g'` && \
-    curl -b ./cookie.txt -L -o ${filename} "https://drive.google.com${query}" && \
+    curl -s -b ./cookie.txt -L -o ${filename} "https://drive.google.com${query}" && \
 
     tar -xf AmberTools18.tar.bz2 -C /opt/ && \
     (cd opt/amber18 && echo -e 'y\ny' | ./configure gnu && make install && \
