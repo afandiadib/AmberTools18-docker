@@ -13,3 +13,10 @@ docker run -it --rm \
 ```
 ## Compilation tests result:
 
+```
+make test.serial
+
+2101 file comparisons passed
+0 file comparisons failed
+0 tests experienced errors
+```
