@@ -1,16 +1,18 @@
 FROM afandiadib/ambertools:serial
 MAINTAINER "Adib Afandi bin Abdullah <fendy90.oscura@gmail.com>"
 
-ENV AMBERHOME=/opt/amber18
-ENV AMBER_PREFIX=/opt/amber18
-ENV PATH="${AMBER_PREFIX}/bin:${PATH}"
-ENV PYTHONPATH="${AMBER_PREFIX}/lib/python3.6/site-packages"
-ENV LD_LIBRARY_PATH="${AMBER_PREFIX}/lib"
+ENV PATH="/opt/openmpi-3.1.2/bin:$PATH"
 ENV PATH="/opt/PnetCDF/bin:$PATH"
 RUN apt-get update && \
 
 # AmberTools 18
-    apt-get -y install openmpi-bin libopenmpi-dev ssh && \
+    apt-get -y install wget ssh && \
+    
+    wget https://download.open-mpi.org/release/open-mpi/v3.1/openmpi-3.1.2.tar.bz2 && \
+    tar -xbvf openmpi-3.1.2.tar.bz2 && \
+    mkdir /openmpi-3.1.2/build && cd /openmpi-3.1.2/build && \
+    ../configure --prefix=/opt/openmpi-3.1.2 && make all install && \
+    
     wget http://cucis.ece.northwestern.edu/projects/PnetCDF/Release/parallel-netcdf-1.10.0.tar.gz && \
     tar -xzvf parallel-netcdf-1.10.0.tar.gz && cd parallel-netcdf-1.10.0 && \
     ./configure --prefix=/opt/PnetCDF && make && make install && \
