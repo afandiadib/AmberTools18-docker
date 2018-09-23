@@ -9,7 +9,7 @@ docker run -it --rm \
            --volume=/home/$USER:/home/$USER \
            --volume=/media:/media \
 	   --volume=/mnt:/mnt \
-           afandiadib/ambertools bash
+           afandiadib/ambertools:serial bash
 ```
 ## Compilation tests result:
 
