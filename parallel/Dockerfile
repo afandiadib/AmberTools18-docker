@@ -9,7 +9,7 @@ RUN apt-get update && \
     apt-get -y install wget ssh && \
     
     wget https://download.open-mpi.org/release/open-mpi/v3.1/openmpi-3.1.2.tar.bz2 && \
-    tar -xbvf openmpi-3.1.2.tar.bz2 && \
+    tar -xf openmpi-3.1.2.tar.bz2 && \
     mkdir /openmpi-3.1.2/build && cd /openmpi-3.1.2/build && \
     ../configure --prefix=/opt/openmpi-3.1.2 && make all install && \
     
