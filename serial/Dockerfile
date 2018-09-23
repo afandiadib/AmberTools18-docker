@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:16.04
 MAINTAINER "Adib Afandi bin Abdullah <fendy90.oscura@gmail.com>"
 
 ENV AMBERHOME=/opt/amber18
