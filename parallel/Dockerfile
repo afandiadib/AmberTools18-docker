@@ -10,7 +10,7 @@ ENV PATH="/opt/PnetCDF/bin:$PATH"
 RUN apt-get update && \
 
 # AmberTools 18
-    apt-get -y install mpich libmpich-dev ssh && \
+    apt-get -y install openmpi-bin libopenmpi-dev ssh && \
     wget http://cucis.ece.northwestern.edu/projects/PnetCDF/Release/parallel-netcdf-1.10.0.tar.gz && \
     tar -xzvf parallel-netcdf-1.10.0.tar.gz && cd parallel-netcdf-1.10.0 && \
     ./configure --prefix=/opt/PnetCDF && make && make install && \
