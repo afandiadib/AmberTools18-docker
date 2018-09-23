@@ -22,4 +22,5 @@ RUN apt-get update && \
 
     chmod -R 777 /opt && \
 # cleanup
+    apt-get -y purge wget && \
     apt-get -y autoremove && apt-get -y clean && rm -rf /var/lib/apt/lists/*
