@@ -16,7 +16,7 @@ docker run -it --rm \
 ```
 make test.serial
 
-2101 file comparisons passed
+2286 file comparisons passed
 0 file comparisons failed
 0 tests experienced errors
 ```
