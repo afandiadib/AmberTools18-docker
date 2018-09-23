@@ -21,6 +21,7 @@ RUN apt-get update && \
     yes | ./configure -mpi --with-pnetcdf /opt/PnetCDF gnu && make install && \
 
     chmod -R 777 /opt && \
+    echo 0 > /proc/sys/kernel/yama/ptrace_scope && \
 # cleanup
     rm -rf /openmpi-3.1.2.tar.bz2 /openmpi-3.1.2 /parallel-netcdf-1.10.0.tar.gz /parallel-netcdf-1.10.0 && \
     apt-get -y purge wget && \
