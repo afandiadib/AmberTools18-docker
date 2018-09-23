@@ -22,5 +22,6 @@ RUN apt-get update && \
 
     chmod -R 777 /opt && \
 # cleanup
+    rm -rf /openmpi-3.1.2.tar.bz2 /openmpi-3.1.2 /parallel-netcdf-1.10.0.tar.gz /parallel-netcdf-1.10.0 && \
     apt-get -y purge wget && \
     apt-get -y autoremove && apt-get -y clean && rm -rf /var/lib/apt/lists/*
