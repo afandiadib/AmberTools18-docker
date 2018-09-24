@@ -16,7 +16,7 @@ docker run -it --rm \
 
 ### Parallel version (openMPI with PnetCDF)
 
-I create a shell script to run it as it requires ptrace_scope to be set to 0.
+I create a shell script to run it as it requires ptrace_scope to be set to 0 under priviledged mode.
 
 ```bash
 #!/bin/bash
