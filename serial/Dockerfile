@@ -4,7 +4,7 @@ MAINTAINER "Adib Afandi bin Abdullah <fendy90.oscura@gmail.com>"
 ENV AMBERHOME=/opt/amber18
 ENV AMBER_PREFIX=/opt/amber18
 ENV PATH="${AMBER_PREFIX}/bin:${PATH}"
-ENV PYTHONPATH="${AMBER_PREFIX}/lib/python3.6/site-packages"
+ENV PYTHONPATH="${AMBER_PREFIX}/lib/python2.7/site-packages"
 ENV LD_LIBRARY_PATH="${AMBER_PREFIX}/lib"
 RUN apt-get update && \
 
