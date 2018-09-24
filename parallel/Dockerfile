@@ -18,7 +18,7 @@ RUN apt-get update && \
     ./configure --prefix=/opt/PnetCDF && make && make install && \
 
     cd /opt/amber18 && \
-    yes | ./configure -mpi --with-pnetcdf /opt/PnetCDF gnu && make install && \
+    yes | ./configure -mpi --with-pnetcdf /opt/PnetCDF gnu && make install && make clean && \
 
     chmod -R 777 /opt && \
 # cleanup
