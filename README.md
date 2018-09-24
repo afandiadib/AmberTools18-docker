@@ -41,6 +41,7 @@ docker exec -it \
 ## Compilation tests result:
 
 1. Serial version
+
 ```
 make test.serial
 
@@ -49,6 +50,7 @@ make test.serial
 0 tests experienced errors
 ```
 2. Parallel version - serial run
+
 ```
 make test.serial
 
@@ -58,6 +60,7 @@ make test.serial
 ```
 
 3. Parallel version - 2 cores
+
 ```
 export DO_PARALLEL="mpirun -np 2"
 make test.parallel
@@ -68,6 +71,7 @@ make test.parallel
 ```
 
 4. Parallel test - 4 cores
+
 ```
 export DO_PARALLEL="mpirun -np 4"
 make test.parallel
