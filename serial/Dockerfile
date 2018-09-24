@@ -21,7 +21,7 @@ RUN apt-get update && \
     curl -s -b ./cookie.txt -L -o ${filename} "https://drive.google.com${query}" && \
 
     tar -xf AmberTools18.tar.bz2 -C /opt/ && \
-    cd /opt/amber18 && yes | ./configure gnu && make install && \
+    cd /opt/amber18 && yes | ./configure gnu && make install && make clean && \
 
     chmod -R 777 /opt && \
 # cleanup
