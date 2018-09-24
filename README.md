@@ -67,7 +67,7 @@ make test.parallel
 2 tests experienced errors
 ```
 
-3. Parallel test - 4 cores
+4. Parallel test - 4 cores
 ```
 export DO_PARALLEL="mpirun -np 4"
 make test.parallel
