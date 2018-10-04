@@ -3,10 +3,8 @@ MAINTAINER "Adib Afandi bin Abdullah <fendy90.oscura@gmail.com>"
 
 ENV AMBERHOME=/opt/amber18
 ENV AMBER_PREFIX=/opt/amber18
-ENV PATH="${AMBER_PREFIX}/bin:${PATH}"
+ENV PATH="/opt/PnetCDF/bin:/opt/openmpi-3.1.2/bin:${AMBER_PREFIX}/bin:${PATH}"
 ENV LD_LIBRARY_PATH="${AMBER_PREFIX}/lib"
-ENV PATH="/opt/openmpi-3.1.2/bin:$PATH"
-ENV PATH="/opt/PnetCDF/bin:$PATH"
 
 RUN apt-get update && \
 
