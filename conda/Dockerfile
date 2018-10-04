@@ -22,7 +22,8 @@ RUN apt-get update && \
 
     tar -xf AmberTools18.tar.bz2 -C /opt/ && \
     cd /opt/amber18 && yes | ./configure --with-python `which python` gnu && make install && make clean && \
-
+    
+    cd / && \
     wget https://download.open-mpi.org/release/open-mpi/v3.1/openmpi-3.1.2.tar.bz2 && \
     tar -xf openmpi-3.1.2.tar.bz2 && \
     mkdir /openmpi-3.1.2/build && cd /openmpi-3.1.2/build && \
