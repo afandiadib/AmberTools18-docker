@@ -1,4 +1,4 @@
-FROM afandiadib/conda
+FROM afandiadib/conda:nvidia
 MAINTAINER "Adib Afandi bin Abdullah <fendy90.oscura@gmail.com>"
 
 ENV AMBERHOME=/opt/amber18
