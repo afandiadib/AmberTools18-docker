@@ -17,7 +17,7 @@ RUN apt-get update && \
     ./configure --prefix=/opt/PnetCDF && make && make install && \
 
     cd /opt/amber18 && \
-    yes | ./configure --with-python `which python` -mpi --with-pnetcdf /opt/PnetCDF gnu && make install && make clean && \
+    yes | ./configure --with-python `which python` -mpi --with-pnetcdf /opt/PnetCDF gnu && make install && \
 
     chmod -R 777 /opt && \
 # cleanup
